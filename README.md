@@ -14,6 +14,7 @@ Usage
 ```php
 use Phine\Test\Method;
 use Phine\Test\Property;
+use Phine\Test\Temp;
 
 class Example
 {
@@ -51,6 +52,19 @@ echo Method::invoke($example, 'nonStatic', 456); // "Non static: 456"
 
 echo Method::invokeArgs('Example', 'isStatic', array(123)); // "Static: 123"
 echo Method::invokeArgs($example, 'nonStatic', array(456)); // "Static: 456"
+
+$temp = new Temp();
+
+// create temporary paths
+$dir = $temp->createDir();
+$file = $temp->createFile();
+
+// copy existing paths to temporary ones (names are preserved)
+$dir = $temp->copyDir('/path/to/dir');
+$file = $temp->copyFile('/path/to/file');
+
+// purge all temporary paths
+$temp->purgePaths();
 ```
 
 Requirement
