@@ -17,7 +17,7 @@
             <string>Phine\Test</string>
           </element>
           <element key="repo_token">
-            <string></string>
+            <string>MwIDBdYQVlOYgi050PMfxgV8tnlWUAjkl</string>
           </element>
           <element key="target_url">
             <string>https://coveralls.io/api/v1/jobs</string>
