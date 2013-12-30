@@ -25,7 +25,7 @@ class Temp
      *
      * @var array
      */
-    private $paths;
+    private $paths = array();
 
     /**
      * The temporary path prefix.
